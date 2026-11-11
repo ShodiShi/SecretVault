@@ -1,0 +1,33 @@
+name: secret_vault
+description: "Личный зашифрованный менеджер паролей, серверов, заметок и задач"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Argon2id и AES-256-GCM (чистый Dart, без нативного кода и без сети).
+  cryptography: ^2.9.0
+  # Локальные настройки устройства: путь к папке, тема, автоблокировка.
+  shared_preferences: ^2.5.6
+  # Системные диалоги выбора папки и файла резервной копии.
+  file_picker: ^13.3.3
+  # Разрешение «Доступ ко всем файлам» на Android.
+  permission_handler: ^13.0.2
+  # Форматирование дат на русском языке.
+  intl: ^0.20.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
